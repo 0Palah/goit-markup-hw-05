@@ -78,6 +78,12 @@ img {
   color: inherit;
 }
 
+/* Стилі секцій */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /*========================== Хедер =====================*/
 .header {
   padding-top: 24px;
@@ -165,6 +171,7 @@ img {
 .header .link:focus {
   color: var(--accent-color);
 }
+
 .site-nav .link.current {
   color: var(--accent-color);
 }
@@ -212,6 +219,7 @@ img {
   text-transform: uppercase;
   color: var(--text-white-color);
 }
+
 .button {
   background-color: var(--accent-color);
   border: none;
@@ -244,10 +252,31 @@ img {
   border-color: var(--accent-color);
 }
 
-/* Стилі секцій */
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+
+  min-width: 528px;
+  min-height: 581px;
+  background-color: #fff;
 }
 
 /* ======================= Особливості =================== */
