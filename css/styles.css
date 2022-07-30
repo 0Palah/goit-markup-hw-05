@@ -83,14 +83,13 @@ img {
 
 /*========================== Хедер =====================*/
 .header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid var(--header-border-color);
 }
 
 .header .container {
   display: flex;
   align-items: center;
+  height: 76px;
 }
 
 /* Лого */
@@ -123,6 +122,14 @@ img {
   display: flex;
 }
 
+.site-nav .item {
+  padding-top: 32px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
   font-weight: 500;
   line-height: 1.14;
@@ -132,10 +139,6 @@ img {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-}
-
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contacts-nav {
@@ -179,6 +182,18 @@ img {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.site-nav .link.current::after {
+  content: "";
+  
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 28px;
+
+  background-color: var(--accent-color);
 }
 
 /*================================ Мейн ================*/
@@ -277,7 +292,8 @@ img {
 .is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* visibility: hidden; */
+  visibility: hidden;
+  /* visibility: hidden Блокує плавний перехід модального вікна у зворотньому напрямку */ 
 }
 
 .backdrop.is-hidden .modal {
