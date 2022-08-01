@@ -279,7 +279,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
-  transition: opacity var(--tran-dur-and-tim-fun);
+  transition: opacity var(--tran-dur-and-tim-fun), visibility var(--tran-dur-and-tim-fun);
 }
 
 .is-hidden {
@@ -305,7 +305,7 @@ img {
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
 
-  transition: transform var(--tran-dur-and-tim-fun);
+  transition: transform var(--tran-dur-and-tim-fun), visibility var(--tran-dur-and-tim-fun);
 }
 
 
